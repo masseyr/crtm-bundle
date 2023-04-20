@@ -19,7 +19,7 @@ cd ..
 echo "[kickstart] installing pycrtm"
 git clone https://github.com/masseyr/pycrtm.git
 cd pycrtm
-python setup.py install
+python3 setup.py install
 #./setup_pycrtm.py  --install $PWD/../ --repos $PWD/../crtm/ --jproc 1 --coef $PWD/../ --ncpath /usr/local/ --h5path /usr/local/ --arch gfortran --inplace
 ln -fs $PWD/../crtm_coef_pycrtm $PWD
 ln -fs `find ./ -maxdepth 1 -name "pycrtm.cpython*.so"` ./pycrtm.so
