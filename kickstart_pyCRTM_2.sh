@@ -17,6 +17,7 @@ sh Get_CRTM_Binary_Files.sh
 cd ..
 
 echo "[kickstart] installing pycrtm"
+rm -rf pycrtm
 git clone https://github.com/masseyr/pycrtm.git
 cd pycrtm
 python3 setup.py install
