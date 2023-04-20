@@ -17,11 +17,12 @@ sh Get_CRTM_Binary_Files.sh
 cd ..
 
 echo "[kickstart] installing pycrtm"
-rm -rf pycrtm
-git clone https://github.com/masseyr/pycrtm.git
+#rm -rf pycrtm
+#git clone https://github.com/masseyr/pycrtm.git
 cd pycrtm
-python3 setup.py install
-#./setup_pycrtm.py  --install $PWD/../ --repos $PWD/../crtm/ --jproc 1 --coef $PWD/../ --ncpath /usr/local/ --h5path /usr/local/ --arch gfortran --inplace
+ls -la
+#python3 setup.py install
+./setup_pycrtm.py  --install $PWD/../ --repos $PWD/../crtm/ --jproc 1 --coef $PWD/../ --ncpath /usr/local/ --h5path /usr/local/ --arch gfortran --inplace
 ln -fs $PWD/../crtm_coef_pycrtm $PWD
 ln -fs `find ./ -maxdepth 1 -name "pycrtm.cpython*.so"` ./pycrtm.so
 ln -fs ../crtm_v2.4.0/lib/libcrtm.so .
